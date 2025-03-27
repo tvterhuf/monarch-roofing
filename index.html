@@ -1,7 +1,263 @@
 <!DOCTYPE html>
-<html>
-<head><title>My Website</title></head>
-<body><h1>Welcome to My Site!</h1>
-<img src="images/house_background.png" alt="House Background" style="width: 100%; height: auto;">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monarch Roofing</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Opaque Background Using Bootstrap Utility Classes 
+    <div class="position-fixed top-0 start-0 w-100 vh-100 bg-light opacity-75"></div>
+    -->
+
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning position-fixed w-100 top-0 shadow" style="z-index: 1;">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="images/only-symbol.png" alt="" style="min-height: 30px; max-height:40px;"></a>
+            <a class="navbar-brand" href="#"><img src="images/monarch-lettering.png" alt="" style="min-height: 30px; max-height:40px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item fs-5 nav-item-home"><a class="nav-link active border-bottom border-3 border-dark" href="#home" style="font-family: 'Quattrocento', serif;">Home</a></li>
+                    <li class="nav-item fs-5"><a class="nav-link" href="#about" style="font-family: 'Quattrocento', serif;">About</a></li>
+                    <li class="nav-item fs-5"><button class="nav-link" data-bs-toggle="modal" data-bs-target="#contact_modal" style="font-family: 'Quattrocento', serif;">Contact</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <!-- Image with Overlay Content -->
+    <div class="container-fluid pb-5">
+        <div id="home" class="vh-100">
+            <img src="images/house_background.png" 
+            alt="House Background" 
+            class="img-fluid w-100 vh-100 mt-5 position-absolute top-0 start-0"
+            style="object-fit: cover;">
+            
+            <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
+                <div class="card shadow-lg p-4 border-0 bg-light rounded-4 border-dark" style="max-width: 500px; min-width: 375px;">
+                    <h2 class="mb-3 text-dark display-5 text-uppercase" style="font-family: 'Quattrocento', serif;">
+                        Click Here to Schedule Your Free Estimate
+                    </h2>
+                    <button class="btn btn-dark btn-lg px-5 py-3 shadow text-nowrap text-uppercase" style="font-family: 'Quattrocento', serif;">
+                        Schedule Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="vh-100 mt-5 pt-5">
+            <div class="row g-4">
+                <!-- Who We Are Section -->
+                <div class="col-lg-6 bg-light p-4">
+                    <h2 class="text-dark display-5 text-uppercase" style="font-family: 'Quattrocento', serif;">
+                        Who We Are
+                    </h2>
+                    <p class="text-dark fs-5" style="font-family: 'Quattrocento', serif;">
+                        When you are looking for a reliable, honest company that offers high quality at a great value, call Monarch Roofing Systems of Gilbert, AZ. 
+                        We have installed and repaired thousands of roofs in the greater Phoenix metro area. 
+                        Our business is family-owned and operated, and we are sixth-generation Arizonans. 
+                        We take pride in our work and have over 16 years of experience. 
+                        We also provide 24-hour emergency service. 
+                        At Monarch Roofing, we do residential and commercial roofing, as well as new roofs, re-roofs, and repairs on all kinds of roofing. 
+                        We carry top brands such as CertainTeed, Eagle Tile, Elastek, GAF/ELK, Malarkey, Monier Tile, Owens Corning.
+                    </p>
+                </div>
+        
+                <!-- Types of Roofing Section -->
+                <div class="col-lg-6 bg-light p-4">
+                    <h2 class="text-dark display-5 text-uppercase" style="font-family: 'Quattrocento', serif;">
+                        Types of Roofing
+                    </h2>
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-0 text-uppercase">
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Tile</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Concrete</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Elastomeric</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Metal</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Balconies</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Shingle</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Clay</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Foam</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Modified Bitumen</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Shake</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Asphalt</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Sand-cast</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Flat</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Walk Decks</span></div>
+                        </div>
+                        <div class="col">
+                            <div class="card p-2 text-center"><span class="fs-5">Patios</span></div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- What Our Homeowners Say Section -->
+                <div class="col-12 bg-light p-5 mb-5">
+                    <h2 class="text-dark display-5 text-uppercase text-center" style="font-family: 'Quattrocento', serif;">
+                        What Our Homeowners Say
+                        <hr>
+                    </h2>
+                    <div class="row row-cols-1 row-cols-lg-3 g-5">
+                        <div class="col">
+                            <div class="card border-1 border-dark text-dark text-center">
+                                <div class="card-body">
+                                    <p class="fs-5" style="font-family: 'Quattrocento', serif;">
+                                        "I have dealt with a lot of trades in the construction industry for the past 20 years and Monarch is as good as it gets.
+                                         Great communication, they were prompt, and the work was done on schedule.
+                                          This was my own home so I was really picky on quality and I only have great things to say about Monarch and David who helped us."
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-secondary text-white">
+                                    <p class="fs-6 p-0 m-0" style="font-family: 'Quattrocento', serif;">
+                                        - Jon L. Gilbert, AZ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-1 border-dark text-dark text-center">
+                                <div class="card-body">
+                                    <p class="fs-5" style="font-family: 'Quattrocento', serif;">
+                                        "We have our new roof completed, and it came out better than expected.
+                                         I was very impressed at how good it looked. We skipped the shopping around, and got our recommendation from my neighbor who just had his roof done by Monarch.
+                                          So glad we did, it turned out to be outstanding! Thanks David, I will be recommending Monarch Roofing to everyone I know."
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-secondary text-white">
+                                    <p class="fs-6 p-0 m-0" style="font-family: 'Quattrocento', serif;">
+                                        - Randy C. Glendale, AZ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-1 border-dark text-dark text-center">
+                                <div class="card-body">
+                                    <p class="fs-5" style="font-family: 'Quattrocento', serif;">
+                                        "David and Monarch Roofing is our go to roofing company.
+                                         He has replaced a roof on one of our rental properties, my parent's home and several of my client's homes while I was in the process of selling it.
+                                          They are responsive, honest, affordable and do a great job.
+                                           They stand by their work and do it right the first time. I would highly recommend them if you are looking for a roof repair/replacement."
+                                    </p>
+                                </div>
+                                <div class="card-footer bg-secondary text-white">
+                                    <p class="fs-6 p-0 m-0" style="font-family: 'Quattrocento', serif;">
+                                        - Bryce H. Mesa, AZ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer class="bg-dark text-white text-center py-3 position-fixed bottom-0 w-100">
+        <p class="mb-0" style="font-family: 'Quattrocento', serif;">
+            &copy; <span id="currentYear"></span> Monarch Roofing | All Rights Reserved
+        </p>
+        <script>
+            document.getElementById("currentYear").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    <div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <!-- Modal Header -->
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title" id="modalLabel">Contact</h5>
+                    <img class="img-fluid ps-2" style="min-height: 30px; max-height:40px;" src="images/MONARCH_symbol_o.png" alt="">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+    
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <div class="table-repsonsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Phone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>928-812-4657</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+    
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.navbar-toggler').removeClass('collapsed');
+            $('.navbar-toggler').addClass('collapsed');
+            $('.navbar-collapse').removeClass('show');
+        });
+            
+        $('.nav-link').on('click', function() {
+            if (!$('.navbar-toggler').hasClass('collapsed')) $('.navbar-toggler').click();
+            if ($(this)[0].innerText === 'Contact') return;
+            $('.nav-link').removeClass('active border-bottom border-3 border-dark');
+            $(this).addClass('active border-bottom border-3 border-dark');
+            
+        });
+
+        $('.navbar-brand').on('click', function() {
+            $('.nav-link').removeClass('active border-bottom border-3 border-dark');
+            $('.nav-item-home').find('.nav-link').addClass('active border-bottom border-3 border-dark');
+        });
+    </script>
+
 </body>
 </html>
