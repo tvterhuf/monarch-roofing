@@ -47,7 +47,9 @@
                     <h2 class="mb-3 text-dark display-5 text-uppercase" style="font-family: 'Quattrocento', serif;">
                         Click Here to Schedule Your Free Estimate
                     </h2>
-                    <button class="btn btn-dark btn-lg px-5 py-3 shadow text-nowrap text-uppercase" style="font-family: 'Quattrocento', serif;">
+                    <button class="btn btn-dark btn-lg px-5 py-3 shadow text-nowrap text-uppercase"
+                    data-bs-toggle="modal" data-bs-target="#schedule_modal"
+                     style="font-family: 'Quattrocento', serif;">
                         Schedule Now
                     </button>
                 </div>
@@ -199,13 +201,13 @@
     </footer>
 
     <div class="modal fade" id="contact_modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 
                 <!-- Modal Header -->
                 <div class="modal-header bg-warning">
-                    <h5 class="modal-title" id="modalLabel">Contact</h5>
-                    <img class="img-fluid ps-2" style="min-height: 30px; max-height:40px;" src="images/MONARCH_symbol_o.png" alt="">
+                    <img class="me-2 img-fluid" src="images/only-symbol.png" style="min-height: 30px; max-height:30px" alt="">
+                    <h5 class="modal-title" id="modalLabel">Contact Monarch Roofing</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
     
@@ -213,14 +215,14 @@
                 <div class="modal-body">
                     <div class="table-repsonsive">
                         <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Phone</th>
-                                </tr>
-                            </thead>
                             <tbody>
                                 <tr>
-                                    <td><a href="tel:+19288124657">(928)-812-4657</a></td>
+                                    <th>Phone</th>
+                                    <td><a href="tel:+1234567892">(123)-456-7891</a></td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>email@monarchroofing.com</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -229,8 +231,80 @@
     
                 <!-- Modal Footer -->
                 <div class="modal-footer">
+                    <button class="btn btn-dark text-nowrap"
+                    data-bs-toggle="modal" data-bs-target="#schedule_modal">
+                        Get An Estimate
+                    </button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="schedule_modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                
+                <!-- Modal Header -->
+                <div class="modal-header bg-warning">
+                    <img class="me-2 img-fluid" src="images/only-symbol.png" style="min-height: 30px; max-height:30px" alt="">
+                    <h5 class="modal-title" id="modalLabel">Schedule Free Estimate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+    
+                <!-- Modal Body -->
+                <div class="modal-body">
+                <small class="form-text mb-2">Enter your information below and we will reach out to schedule your free estimate.</small>
+                <form id="schedule_estimate_form" action="https://docs.google.com/forms/d/e/1FAIpQLSdaDJZeXNFKzIfEeJODRrses_SSIu3AfBwlUnSeKYgL68KiLA/formResponse" method="POST" target="_blank">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" name="entry.1560379020" placeholder="Name" required>
+                        <label for="name">Name <small class="form-text text-danger">(Required)</small></label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="phone" name="entry.1211251" placeholder="Phone" required>
+                        <label for="phone">Phone <small class="form-text text-danger">(Required)</small></label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="email" name="entry.1178998469" placeholder="Email" required>
+                        <label for="email">Email <small class="form-text text-danger">(Required)</small></label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="address" name="entry.398946818" placeholder="Address">
+                        <label for="address">Address <small class="form-text">(Optional)</small></label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="city" name="entry.597628397" placeholder="City">
+                        <label for="city">City <small class="form-text">(Optional)</small></label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="state" name="entry.377945947" placeholder="State">
+                        <label for="state">State <small class="form-text">(Optional)</small></label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="zip" name="entry.755972644" placeholder="Zip">
+                        <label for="zip">Zip <small class="form-text">(Optional)</small></label>
+                    </div>
+                    
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control mb-3" id="message" name="entry.1554772123" placeholder="Message" style="height:120px;"></textarea>
+                        <label for="message">Details <small class="form-text">(Optional)</small></label>
+                    </div>
+
+                </div>
+                    
+    
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </form>
             </div>
         </div>
     </div>
@@ -256,6 +330,15 @@
         $('.navbar-brand').on('click', function() {
             $('.nav-link').removeClass('active border-bottom border-3 border-dark');
             $('.nav-item-home').find('.nav-link').addClass('active border-bottom border-3 border-dark');
+        });
+
+        $('#schedule_estimate_form').on('submit', function() {
+            alert('Thank you for submitting your information. We will reach out to you shortly to schedule your free estimate.');
+            $('#schedule_modal').modal('hide');
+            setTimeout(function() {
+                $('#schedule_estimate_form')[0].reset(); // Clear the form
+                location.reload(); // Reload the page
+            }, 2000); // Delay of 2 seconds (adjust as needed)
         });
     </script>
 
